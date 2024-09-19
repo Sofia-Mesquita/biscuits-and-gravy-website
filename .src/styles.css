@@ -1,4 +1,164 @@
 .banner{
     width: 100%;
+    overflow-x: hidden;
     height: 300px;
+    background-image: url(../.res/BreakfastBanner.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.banner-logo{
+    background-position: center;
+    position: absolute;                  /* Absolute positioning within the content */
+    top: 0;
+    left: 50%;                           /* Center horizontally */
+    transform: translate(-55%, -50%);         /* Adjust centering due to left 50% */
+    z-index: 2; 
+    border: 0;
+}
+
+.content {
+    width: 100%;
+    padding-top: 10%;
+    background-image: url(../.res/yellowGingham.jpg);
+    position: relative;
+    z-index: 1;                         /* Ensure content scrolls over the banner */
+}
+
+.footer {
+    width: 100%;
+    height: 200px;
+    background-color: #FFDE59;
+    z-index: 9;
+}
+
+h1 {
+    text-align: center;
+    font-family: Astral Sisters;
+    font-size: 36pt;
+}
+
+h2, p {
+    text-align: center;
+    font-family: 'Open-Sans', sans-serif;
+    font-size: 14pt;
+    font-weight: lighter;
+    filter:drop-shadow(0 0 0.75rem grey)
+}
+
+body {
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: lighter;
+    min-height: 100vh; /* Ensure the page fills at least the full height */
+}
+
+.parent{
+    display: flex;
+    width: 100%;
+    height: 80%;
+
+}
+
+.left-content{
+    width: 50%;
+    padding: 5%;
+    overflow: hidden;
+}
+
+.right-content{
+    width: 50%;
+    padding: 5%;
+    overflow: hidden;
+
+}
+
+@font-face {
+    font-family: "Astral Sisters";
+    src: url(../.res/fonts/Astral\ Sisters.ttf);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ffff;
+
+}
+
+p.hours{
+    font-size: calc(1.5vw + 1vh);
+    text-align: center;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: lighter;
+    filter:drop-shadow(0 0 0.75rem grey)
+}
+
+.menu-container{
+    display: inline-block;
+    top: 1%;
+    position:absolute;
+    cursor: pointer;
+    top: 3vh;
+    right: 3vw;
+    z-index: 2;
+
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+    transform: translate(0, 11px) rotate(-45deg);
+}
+  
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+  
+/* Rotate last bar */
+.change .bar3 {
+    transform: translate(0, -11px) rotate(45deg);
+}
+
+.floating-menu {
+    position: absolute;
+    top: 2vh;               /* Align with the top of the menu icon */
+    right: 2vw;             /* Align with the right of the menu icon */
+    width: 20vw;
+    height: 25vh;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    display: none;          /* Initially hidden */
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 0.3s ease-in-out;  /* Smooth fade-in effect */
+}
+
+.floating-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 5%;
+
+}
+
+.floating-menu ul li{
+    font-size: calc(1vw + 1vh);
+    text-align: center;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: lighter;
+    filter:drop-shadow(0 0 0.75rem grey);
+    padding: 2%;
 }
