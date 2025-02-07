@@ -1,0 +1,326 @@
+
+html {
+  /* width: 70%; */
+  justify-self: center;
+  background-color: #FFDE59;
+  background-image: url(../img/yellowGingham.png);
+  background-size: contain;
+}
+
+@media screen and (width > 1300px) {
+  html {
+    width: 75%;
+  }
+}
+
+@media screen and (width > 900px) and (width < 1300px) {
+  html{
+    width: 80%;
+  }
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: lighter;
+  min-height: 100vh; /* Ensure the page fills at least the full height */
+  background-color: 	hsl(48, 100%, 67%, 0.5)
+}
+
+/* BANNER HEADER */
+header {
+  width: 100%;
+  overflow-x: hidden;
+  height: 300px;
+  background-image: url(../img/B&G\ mockup.png);
+  background-size: cover;
+  background-position: 60%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.banner-logo {
+  background-position: center;
+  position: absolute;                  /* Absolute positioning within the content */
+  top: 0;
+  left: 50%;                           /* Center horizontally */
+  transform: translate(-55%, -50%);         /* Adjust centering due to left 50% */
+  z-index: 2; 
+  border: 0;
+  width: 30%;
+  aspect-ratio: 1/1;
+}
+
+.banner-logo img {
+  width: 100%; 
+  height: auto; 
+  object-fit: cover; 
+  border: 0;
+}
+
+/* MAIN PAGE TITLE */
+
+#main-title h1 {
+  margin:10px;
+  margin-top: 30px;
+}
+
+#main-title h2 {
+  margin:auto;
+}
+
+/* MENU */
+.menu-container{
+  display: inline-block;
+  top: 1%;
+  position:absolute;
+  cursor: pointer;
+  top: 3vh;
+  right: 3vw;
+  z-index: 2;
+
+}
+
+nav {
+  position: absolute;
+  top: 2vh;               /* Align with the top of the menu icon */
+  right: 2vw;             /* Align with the right of the menu icon */
+  width: 20vw;
+  height: fit-content;
+  background-color: #FFDE59;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  display: none;          /* Initially hidden */
+  opacity: 0;
+  z-index: 1;
+  transition: opacity 0.3s ease-in-out;  /* Smooth fade-in effect */
+}
+
+nav ul{
+  list-style: none;
+  margin: 0;
+  padding: 10%;
+  padding-top: 20%;
+
+}
+
+nav ul li{
+  font-size: calc(1vw + 1vh);
+  text-align: center;
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: lighter;
+  filter:drop-shadow(0 0 0.75rem grey);
+  padding: 5%;
+}
+
+.bar1, .bar2, .bar3 {
+  width: 35px;
+  height: 5px;
+  background-color: #333;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {opacity: 0;}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+
+/* MAIN CONTENT */
+main {
+  padding-top: 10%;
+  background-size: cover;
+  position: relative;
+  z-index: 1;   /* Ensure content scrolls over the banner */
+}
+
+/* SPLIT CONTENT */
+.parent{
+  display: flex;
+  width: 100%;
+  height: 80%;
+
+}
+
+.left-content{
+  width: 50%;
+  padding: 5%;
+  overflow: hidden;
+}
+
+.right-content{
+  width: 50%;
+  padding: 5%;
+  overflow: hidden;
+
+}
+
+/* FOOTER/BOTTOM OF PAGE */
+footer {
+  display: block;
+  width: 100%;
+  height: 20vh;
+  background-color: #FFDE59;
+  z-index: 9;
+  padding-bottom: 1%;
+  justify-content: center;
+}
+
+footer #main-footer {
+  display: flex;
+  height: 100%;
+}
+
+.lower-logo{
+  height: auto;
+  width: fit-content;
+  position: relative;
+  padding: 2%;
+  justify-self: center;
+  min-width: 100px;
+}
+
+.lower-logo img{
+  height: 80%; 
+  width: auto;
+  object-fit: contain; 
+  border: 0; 
+  position: relative; 
+  top: 10%; 
+}
+
+.lower-content{
+  display: flex;
+  width: fit-content;
+}
+
+.lower-content-left{
+  width: fit-content;
+  position: relative;
+  align-content: center;
+}
+
+.lower-content-left ul{
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  align-content: center;
+
+}
+
+.lower-content-left ul li{
+  font-size: calc(1vw + 1vh);
+  text-align: left;
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: lighter;
+  filter:drop-shadow(0 0 0.75rem grey);
+}
+
+.lower-content-right{
+  width: fit-content;
+  position: relative;
+  padding-top: 2.5%;
+  padding-right: 2.5%;
+  justify-content: right;
+  display: grid;
+  grid-auto-rows: min-content;
+  text-align: right;
+  align-content: center;
+}
+
+.lower-contact p{
+  text-align: right;
+  font-size: calc(1vw + 1vh);
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: lighter;
+  filter:drop-shadow(0 0 0.75rem grey);
+  word-break: break-all;
+  margin: 0;
+}
+
+.social-icons{
+  display: flex;
+  justify-content: right;
+  height: auto;
+  width: auto;
+}
+
+.social-icon-format{
+  width: fit-content;
+  height: auto;
+  padding: 1%;
+  padding-bottom: 0;
+  max-height: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icon-format img{
+  height: 100%;
+  border: 0;
+
+}
+
+.copyright{
+  background-color: grey;
+  font-size: calc(.75vw + .74vh);
+  font-family: 'Open-Sans', sans-serif;
+  font-weight: lighter;
+  text-align: center;
+  padding: 1%;
+}
+
+
+/* General Items */
+h1 {
+  text-align: center;
+  font-family: Astral Sisters;
+  font-size: 36pt;
+}
+
+h2, p {
+  text-align: center;
+  font-family: 'Open-Sans', sans-serif;
+  font-size: 14pt;
+  font-weight: lighter;
+  filter:drop-shadow(0 0 0.75rem grey)
+}
+
+@font-face {
+  font-family: "Astral Sisters";
+  src: url(../fonts/Astral\ Sisters.ttf);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+
+}
+
+/* Link decorations */
+a:link {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited{
+  text-decoration: none;
+  color: black;
+}
+
+a:hover{
+  text-decoration: underline;
+}

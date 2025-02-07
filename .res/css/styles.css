@@ -1,0 +1,100 @@
+
+/* HOME PAGE */
+.address{
+    font-size: 100%; 
+    text-align: left;
+}
+
+#waffles{
+    width: 100%; 
+    height: auto;
+    padding: 20; 
+    object-fit: cover;
+}
+
+#yum {
+    border: 0; 
+    padding-top: 10%;
+}
+
+#pie {
+    width: 100%; 
+    height: auto;
+    padding: 20; 
+    object-fit: cover;
+}
+
+
+.directions-container {
+    display: flex;                         
+    align-items: center;                   
+    gap: 10px;    
+    justify-content: center; 
+    height: 100%;                        
+}
+
+.directions-container p {
+    font-size: calc(1.5vw + 1vh);
+    text-align: center;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: lighter;
+    filter:drop-shadow(0 0 0.75rem grey);
+    margin: 0;
+}
+
+.directions-icon {
+    height: 100%;                          
+    width: auto;                           
+    border: 0;                             
+}
+
+p.hours{
+    font-size: calc(1.5vw + 1vh);
+    text-align: center;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: lighter;
+    filter:drop-shadow(0 0 0.75rem grey)
+}
+
+
+/* MENU PAGE */
+#menu-container {
+    justify-items: center; 
+    display: grid; 
+    row-gap: 1%; 
+    padding: 5%;
+    margin-bottom: 1%;
+}
+
+.menu{
+    width: 50%;
+    height: fit-content;
+    justify-content: center;
+}
+
+.button{
+    background-color: #FFDE59;
+    padding: 2.5%;
+    border-radius: 8%;
+    filter:drop-shadow(5px 5px 4px grey);
+    
+}
+
+.button:hover{
+    filter: none;
+}
+
+/* CONTACT PAGE */
+
+#heart-pancakes {
+    width: 100%; 
+    height: auto;
+    padding: 20; 
+    object-fit: cover; 
+    border: 0;
+}
+
+
+
+
+
