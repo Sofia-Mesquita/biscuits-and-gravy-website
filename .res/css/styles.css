@@ -94,6 +94,21 @@ p.hours{
     border: 0;
 }
 
+/* CATERING PAGE */
+#Catering{
+    font-size: 2rem;
+}
+
+#Catering-Services {
+    font-size: 1.5rem;
+    list-style: none;
+}
+
+#catering-img {
+    height: 80%;
+    width: auto;
+}
+
 
 
 
